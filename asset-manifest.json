@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/stockle/static/css/main.214dff33.css",
+    "main.js": "/stockle/static/js/main.8d23cf77.js",
+    "static/js/787.f7c9dcf4.chunk.js": "/stockle/static/js/787.f7c9dcf4.chunk.js",
+    "index.html": "/stockle/index.html",
+    "main.214dff33.css.map": "/stockle/static/css/main.214dff33.css.map",
+    "main.8d23cf77.js.map": "/stockle/static/js/main.8d23cf77.js.map",
+    "787.f7c9dcf4.chunk.js.map": "/stockle/static/js/787.f7c9dcf4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.214dff33.css",
+    "static/js/main.8d23cf77.js"
+  ]
+}
