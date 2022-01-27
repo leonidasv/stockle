@@ -10,8 +10,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500">
-        Guess the STOCK (or ETF) in 6 tries. After each guess, the color of the
-        tiles will change to show how close your guess was to the word.
+        Guess the stock (or ETF) in 6 tries. After each guess, the color of the
+        tiles will change to show how close your guess was to the ticker symbol.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -43,8 +43,9 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-gray-500">
         The letter <b>A</b> is not in the word in any spot.
       </p>
+      <br />
       <p className="text-sm text-gray-500">
-        A new stock is available for guessing everyday at 9:30am EST.
+        A new ticker is available for guessing everyday at 9:30am EST.
       </p>
     </BaseModal>
   )
