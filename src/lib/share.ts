@@ -3,7 +3,7 @@ import { solutionIndex } from './words'
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(
-    `My Stockle stockle.win ${solutionIndex} ${lost ? 'X' : guesses.length}/6\n\n` +
+    `stockle.win 📈 ${lost ? 'X' : guesses.length}/6\n\n` +
       generateEmojiGrid(guesses)
   )
 }
