@@ -21,7 +21,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="T" />
       </div>
       <p className="text-sm text-gray-500">
-        The letter <b>M</b> is in the word and in the correct spot.
+        The letter <b>M</b> is in the ticker and in the correct spot.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -31,7 +31,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="A" />
       </div>
       <p className="text-sm text-gray-500">
-        The letter <b>L</b> is in the word but in the wrong spot.
+        The letter <b>L</b> is in the ticker but in the wrong spot.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -41,7 +41,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="A" status="absent" />
       </div>
       <p className="text-sm text-gray-500">
-        The letter <b>A</b> is not in the word in any spot.
+        The letter <b>A</b> is not in the ticker in any spot.
       </p>
       <br />
       <p className="text-sm text-gray-500">
