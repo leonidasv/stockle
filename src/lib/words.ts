@@ -17,8 +17,6 @@ export const getWordOfDay = () => {
   const index = Math.floor((now - epochMs) / msInDay)
   const nextday = (index + 1) * msInDay + epochMs
 
-  console.log(`solution: ${WORDS[index]}`)
-
   return {
     solution: WORDS[index],
     solutionIndex: index,
