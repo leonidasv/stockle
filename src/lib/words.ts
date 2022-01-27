@@ -11,7 +11,7 @@ export const isWinningWord = (word: string) => {
 
 export const getWordOfDay = () => {
   // January 3, 2022 9:30 EST - Game Epoch (2022 Nasdaq's opening bell)
-  const epochMs = 1641231000000
+  const epochMs = 1641218400000
   const now = Date.now()
   const msInDay = 86400000
   const index = Math.floor((now - epochMs) / msInDay)
