@@ -12,11 +12,7 @@ type Props = {
 export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
-      <Dialog
-        as="div"
-        className="fixed z-10 inset-0 overflow-y-auto"
-        onClose={handleClose}
-      >
+      <Dialog as="div" className="fixed z-10 inset-0 overflow-y-auto" onClose={handleClose}>
         <div className="flex items-center justify-center min-h-screen py-10 px-4 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
@@ -31,10 +27,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
           </Transition.Child>
 
           {/* This element is to trick the browser into centering the modal contents. */}
-          <span
-            className="hidden sm:inline-block sm:align-middle sm:h-screen"
-            aria-hidden="true"
-          >
+          <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">
             &#8203;
           </span>
           <Transition.Child
@@ -48,17 +41,11 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
           >
             <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
               <div className="absolute right-4 top-4">
-                <XCircleIcon
-                  className="h-6 w-6 cursor-pointer"
-                  onClick={() => handleClose()}
-                />
+                <XCircleIcon className="h-6 w-6 cursor-pointer" onClick={() => handleClose()} />
               </div>
               <div>
                 <div className="text-center">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg leading-6 font-medium text-gray-900"
-                  >
+                  <Dialog.Title as="h3" className="text-lg leading-6 font-medium text-gray-900">
                     {title}
                   </Dialog.Title>
                   <div className="mt-2">{children}</div>

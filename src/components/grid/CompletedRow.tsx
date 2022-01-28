@@ -3,10 +3,11 @@ import { Cell } from './Cell'
 
 type Props = {
   guess: string
+  solution: string
 }
 
-export const CompletedRow = ({ guess }: Props) => {
-  const statuses = getGuessStatuses(guess)
+export const CompletedRow = ({ guess, solution }: Props) => {
+  const statuses = getGuessStatuses(guess, solution)
 
   return (
     <div className="flex justify-center mb-1">
