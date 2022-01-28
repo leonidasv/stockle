@@ -43,6 +43,6 @@ export const info: { [k: string]: Translation } = {
     how_to_play_letter_present: ' pertence ao ativo mas está na posição incorreta.',
     how_to_play_letter_absent: ' não está presente no código do ativo.',
 
-    new_ticker_available_at: 'O código do desafio muda todo dia às 9:30 (BRT), junto com a abertura do mercado.',
+    new_ticker_available_at: 'O código do desafio muda todo dia às 10:00 (BRT), junto com a abertura do mercado.',
   },
 } as const

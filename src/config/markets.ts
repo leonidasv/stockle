@@ -11,8 +11,8 @@ export type MarketConfig = {
 export const marketConfig: Record<MARKET, MarketConfig> = {
   b3: {
     wordSlice: 365,
-    // Jan 3, 9:30am BRT
-    epoch: 1641213000000,
+    // Jan 3, 10:00am BRT
+    epoch: 1641214800000,
     defaultLang: 'pt',
   },
   nasdaq: {

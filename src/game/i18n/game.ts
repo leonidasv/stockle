@@ -25,7 +25,7 @@ export const game: { [k: string]: Translation } = {
     win_message_2: 'Excelente',
     win_message_3: 'Ótimo',
     win_message_4: 'Se saiu bem',
-    the_stock_was: 'O ativo era',
+    the_stock_was: 'Loss! O ativo era',
     stock_not_found: 'Ativo não encontrado',
     not_enough_letters: 'Letras insuficientes',
     game_copied_to_clipboard: 'Resultado copiado',

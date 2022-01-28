@@ -58,6 +58,6 @@ export function GameContainer({ market }: Props) {
 const Placeholder = () => (
   <>
     <Grid guesses={[]} currentGuess={''} solution={'_'} />
-    <Keyboard onChar={() => null} onDelete={() => null} onEnter={() => null} guesses={[]} disabled solution={'_'} />
+    <Keyboard onChar={() => null} onDelete={() => null} onEnter={() => null} guesses={[]} solution={'_'} disabled />
   </>
 )

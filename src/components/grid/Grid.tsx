@@ -6,9 +6,10 @@ type Props = {
   guesses: string[]
   currentGuess: string
   solution: string
+  disabled?: boolean
 }
 
-export const Grid = ({ guesses, currentGuess, solution }: Props) => {
+export const Grid = ({ guesses, currentGuess, solution, disabled }: Props) => {
   const empties = guesses.length < 5 ? Array.from(Array(5 - guesses.length)) : []
 
   return (
@@ -16,9 +17,9 @@ export const Grid = ({ guesses, currentGuess, solution }: Props) => {
       {guesses.map((guess, i) => (
         <CompletedRow key={i} guess={guess} solution={solution} />
       ))}
-      {guesses.length < 6 && <CurrentRow guess={currentGuess} />}
+      {guesses.length < 6 && <CurrentRow guess={currentGuess} disabled={disabled} />}
       {empties.map((_, i) => (
-        <EmptyRow key={i} />
+        <EmptyRow key={i} disabled={disabled} />
       ))}
     </div>
   )
