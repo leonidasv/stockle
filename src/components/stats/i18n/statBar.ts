@@ -13,8 +13,8 @@ export const statBar: { [k: string]: Translation } = {
     best_streak: 'Best streak',
   },
   pt: {
-    total_tries: 'Tentativas Totais',
-    success_rate: 'Taxa de Sucesso',
+    total_tries: 'Jogos',
+    success_rate: 'de sucesso',
     current_streak: 'Sequência atual',
     best_streak: 'Melhor sequência',
   },
