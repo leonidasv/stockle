@@ -9,10 +9,30 @@ most traded stocks (by volume) in the last few days before the game release (Jan
 
 The "ticker of the day" changes every day at the market opening (9:30am EST for NYSE/Nasdaq or 9:30am BRT for B3).
 
-#### TODO
+### TODO
 
 - [ ] Add unit tests
 - [ ] Improved i18n
 - [ ] Improved code organization 😅
 
 Pull Requests are welcome.
+
+### Contributing
+
+_To Run Locally:_
+Clone the repository and perform the following command line actions:
+
+```bash
+$ cd wordle
+$ npm install
+$ npm run start
+```
+
+_To build/run docker container:_
+
+```bash
+$ docker build -t notwordle .
+$ docker run -d -p 3000:3000 notwordle
+```
+
+Open http://localhost:3000 in browser.
