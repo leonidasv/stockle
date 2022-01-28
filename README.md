@@ -12,7 +12,7 @@ The "ticker of the day" changes every day at the market opening (9:30am EST for 
 #### TODO
 
 - [ ] Add unit tests
-- [ ] i18n
-- [ ] Improve code organization 😅
+- [ ] Improved i18n
+- [ ] Improved code organization 😅
 
 Pull Requests are welcome.

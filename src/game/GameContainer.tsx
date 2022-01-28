@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Grid } from '../components/grid/Grid'
 import { Keyboard } from '../components/keyboard/Keyboard'
 import { AboutModal } from '../components/modals/AboutModal'
 import { InfoModal } from '../components/modals/InfoModal'
 import { MARKET } from '../constants/strings'
+import { LangContext } from '../context/lang'
 import { Words, wordsFactory } from '../lib/words'
 import { Game } from './Game'
 import { Header } from './Header'
+import { gameContainer } from './i18n/gameContainer'
 
 type Props = {
   market: MARKET
@@ -20,6 +22,8 @@ export function GameContainer({ market }: Props) {
   useEffect(() => {
     wordsFactory(market).then((w) => setWords(w))
   }, [market])
+  const lang = useContext(LangContext)
+  const t = gameContainer[lang]
   const loading = !words
 
   return (
@@ -45,7 +49,7 @@ export function GameContainer({ market }: Props) {
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 select-none"
         onClick={() => setIsAboutModalOpen(true)}
       >
-        About this game
+        {t.about_this_game}
       </button>
     </div>
   )

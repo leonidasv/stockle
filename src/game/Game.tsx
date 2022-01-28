@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Alert } from '../components/alerts/Alert'
 import { Grid } from '../components/grid/Grid'
 import { Keyboard } from '../components/keyboard/Keyboard'
 import { StatsModal } from '../components/modals/StatsModal'
-import { MARKET, WIN_MESSAGES } from '../constants/strings'
+import { MARKET } from '../constants/strings'
+import { LangContext } from '../context/lang'
 import {
   fixOldState,
   fixOldStats,
@@ -12,6 +13,7 @@ import {
 } from '../lib/localStorage'
 import { addStatsForCompletedGame, loadStats } from '../lib/stats'
 import { Words } from '../lib/words'
+import { game } from './i18n/game'
 
 const ALERT_TIME_MS = 2000
 
@@ -24,6 +26,9 @@ type Props = {
 
 export function Game({ market, words, isStatsModalOpen, setIsStatsModalOpen }: Props) {
   useEffect(() => fixOld(), [])
+
+  const lang = useContext(LangContext)
+  const t = game[lang]
 
   const { solution, tomorrow, isWinningWord, isWordInWordList } = words
 
@@ -56,8 +61,10 @@ export function Game({ market, words, isStatsModalOpen, setIsStatsModalOpen }: P
   }, [guesses, market, solution])
 
   useEffect(() => {
+    const win_msgs = [t.win_message_1, t.win_message_2, t.win_message_3, t.win_message_4]
+
     if (isGameWon) {
-      setSuccessAlert(WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)])
+      setSuccessAlert(win_msgs[Math.floor(Math.random() * win_msgs.length)])
       setTimeout(() => {
         setSuccessAlert('')
         setIsStatsModalOpen(true)
@@ -68,7 +75,7 @@ export function Game({ market, words, isStatsModalOpen, setIsStatsModalOpen }: P
         setIsStatsModalOpen(true)
       }, ALERT_TIME_MS)
     }
-  }, [isGameWon, isGameLost, setIsStatsModalOpen])
+  }, [isGameWon, isGameLost, t, setIsStatsModalOpen])
 
   const onChar = (value: string) => {
     if (currentGuess.length < 4 && guesses.length < 6 && !isGameWon) {
@@ -128,14 +135,14 @@ export function Game({ market, words, isStatsModalOpen, setIsStatsModalOpen }: P
         isGameWon={isGameWon}
         tomorrow={tomorrow}
         handleShare={() => {
-          setSuccessAlert('Game copied to clipboard')
+          setSuccessAlert(t.game_copied_to_clipboard)
           return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
         }}
         {...guessesAndSolution}
       />
-      <Alert message="Not enough letters" isOpen={isNotEnoughLetters} />
-      <Alert message="Stock not found" isOpen={isWordNotFoundAlertOpen} />
-      <Alert message={`The stock was ${solution}`} isOpen={isGameLost} />
+      <Alert message={t.not_enough_letters} isOpen={isNotEnoughLetters} />
+      <Alert message={t.stock_not_found} isOpen={isWordNotFoundAlertOpen} />
+      <Alert message={`${t.the_stock_was} ${solution}`} isOpen={isGameLost} />
       <Alert message={successAlert} isOpen={successAlert !== ''} variant="success" />
     </>
   )
