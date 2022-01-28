@@ -8,10 +8,7 @@ type StoredGameState = {
   solution: string
 }
 
-export const saveGameStateToLocalStorage = (
-  gameState: StoredGameState,
-  m: MARKET
-) => {
+export const saveGameStateToLocalStorage = (gameState: StoredGameState, m: MARKET) => {
   localStorage.setItem(gameStateKey(m), JSON.stringify(gameState))
 }
 

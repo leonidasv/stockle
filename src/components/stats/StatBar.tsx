@@ -4,13 +4,7 @@ type Props = {
   gameStats: GameStats
 }
 
-const StatItem = ({
-  label,
-  value,
-}: {
-  label: string
-  value: string | number
-}) => {
+const StatItem = ({ label, value }: { label: string; value: string | number }) => {
   return (
     <div className="items-center justify-center m-1 w-1/4">
       <div className="text-3xl font-bold">{value}</div>

@@ -1,17 +1,9 @@
 import { MARKET } from '../constants/strings'
-import {
-  GameStats,
-  loadStatsFromLocalStorage,
-  saveStatsToLocalStorage,
-} from './localStorage'
+import { GameStats, loadStatsFromLocalStorage, saveStatsToLocalStorage } from './localStorage'
 
 // In stats array elements 0-5 are successes in 1-6 trys
 
-export const addStatsForCompletedGame = (
-  gameStats: GameStats,
-  count: number,
-  market: MARKET
-) => {
+export const addStatsForCompletedGame = (gameStats: GameStats, count: number, market: MARKET) => {
   // Count is number of incorrect guesses before end.
   const stats = { ...gameStats }
 
@@ -52,7 +44,5 @@ export const loadStats = (market: MARKET) => {
 const getSuccessRate = (gameStats: GameStats) => {
   const { totalGames, gamesFailed } = gameStats
 
-  return Math.round(
-    (100 * (totalGames - gamesFailed)) / Math.max(totalGames, 1)
-  )
+  return Math.round((100 * (totalGames - gamesFailed)) / Math.max(totalGames, 1))
 }
