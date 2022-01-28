@@ -1,9 +1,12 @@
+import { useContext } from 'react'
 import Countdown from 'react-countdown'
+import { LangContext } from '../../context/lang'
 import { GameStats } from '../../lib/localStorage'
 import { shareStatus } from '../../lib/share'
 import { Histogram } from '../stats/Histogram'
 import { StatBar } from '../stats/StatBar'
 import { BaseModal } from './BaseModal'
+import { stats } from './i18n/stats'
 
 type Props = {
   isOpen: boolean
@@ -28,6 +31,9 @@ export const StatsModal = ({
   solution,
   tomorrow,
 }: Props) => {
+  const lang = useContext(LangContext)
+  const t = stats[lang]
+
   if (gameStats.totalGames <= 0) {
     return (
       <BaseModal title="Statistics" isOpen={isOpen} handleClose={handleClose}>
@@ -36,14 +42,14 @@ export const StatsModal = ({
     )
   }
   return (
-    <BaseModal title="Statistics" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title={t.statistics_title} isOpen={isOpen} handleClose={handleClose}>
       <StatBar gameStats={gameStats} />
-      <h4 className="text-lg leading-6 font-medium text-gray-900">Guess Distribution</h4>
+      <h4 className="text-lg leading-6 font-medium text-gray-900">{t.guess_distribution}</h4>
       <Histogram gameStats={gameStats} />
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2">
           <div>
-            <h5>New stock in</h5>
+            <h5>{t.new_stock_in}</h5>
             <Countdown className="text-lg font-medium text-gray-900" date={tomorrow} daysInHours={true} />
           </div>
           <button
@@ -54,7 +60,7 @@ export const StatsModal = ({
               handleShare()
             }}
           >
-            Share
+            {t.share}
           </button>
         </div>
       )}
