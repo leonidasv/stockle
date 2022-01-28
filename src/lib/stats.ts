@@ -1,3 +1,4 @@
+import { MARKET } from '../constants/strings'
 import {
   GameStats,
   loadStatsFromLocalStorage,
@@ -8,7 +9,8 @@ import {
 
 export const addStatsForCompletedGame = (
   gameStats: GameStats,
-  count: number
+  count: number,
+  market: MARKET
 ) => {
   // Count is number of incorrect guesses before end.
   const stats = { ...gameStats }
@@ -30,7 +32,7 @@ export const addStatsForCompletedGame = (
 
   stats.successRate = getSuccessRate(stats)
 
-  saveStatsToLocalStorage(stats)
+  saveStatsToLocalStorage(stats, market)
   return stats
 }
 
@@ -43,8 +45,8 @@ const defaultStats: GameStats = {
   successRate: 0,
 }
 
-export const loadStats = () => {
-  return loadStatsFromLocalStorage() || defaultStats
+export const loadStats = (market: MARKET) => {
+  return loadStatsFromLocalStorage(market) || defaultStats
 }
 
 const getSuccessRate = (gameStats: GameStats) => {
