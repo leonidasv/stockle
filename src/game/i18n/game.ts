@@ -21,7 +21,7 @@ export const game: { [k: string]: Translation } = {
     game_copied_to_clipboard: 'Game copied to clipboard',
   },
   pt: {
-    win_message_1: 'Bom trabalho!',
+    win_message_1: 'Deu green!',
     win_message_2: 'Excelente',
     win_message_3: 'Ótimo',
     win_message_4: 'Se saiu bem',
