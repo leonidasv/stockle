@@ -82,7 +82,7 @@ export const Keyboard = ({ onChar, onDelete, onEnter, guesses, disabled, solutio
         <Key disabled={d} value="N" onClick={onClick} status={charStatuses['N']} />
         <Key disabled={d} value="M" onClick={onClick} status={charStatuses['M']} />
         <Key disabled={d} width={65.4} value="DELETE" onClick={onClick}>
-          Delete
+          ⌫
         </Key>
       </div>
     </div>
