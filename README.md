@@ -2,6 +2,12 @@
 
 ### [Play now](https://stockle.win)
 
+<span align="center">
+  
+![chrome_JPnFE4QB7o](https://user-images.githubusercontent.com/17609157/151673416-2123bdc4-706b-4ce1-91fe-bfa556f5b2d8.png)
+  
+</span>
+
 Forked from [hannahcode/wordle](https://github.com/hannahcode/wordle).
 
 It accepts any 4-letter stock symbol from NYSE/Nasdaq or B3 as input. The daily guessing dataset is composed of some of
