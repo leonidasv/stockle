@@ -1,5 +1,5 @@
 import { MARKET } from '../constants/strings'
-import { GameStats, loadStatsFromLocalStorage, saveStatsToLocalStorage } from './localStorage'
+import { GameStats, loadStatsFromLocalStorage, saveStatsToLocalStorage } from './gameLocalStorage'
 
 // In stats array elements 0-5 are successes in 1-6 trys
 

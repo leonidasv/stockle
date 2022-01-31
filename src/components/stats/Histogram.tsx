@@ -1,4 +1,4 @@
-import { GameStats } from '../../lib/localStorage'
+import { GameStats } from '../../lib/gameLocalStorage'
 import { Progress } from './Progress'
 
 type Props = {

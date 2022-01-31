@@ -10,7 +10,7 @@ import {
   fixOldStats,
   loadGameStateFromLocalStorage,
   saveGameStateToLocalStorage,
-} from '../lib/localStorage'
+} from '../lib/gameLocalStorage'
 import { addStatsForCompletedGame, loadStats } from '../lib/stats'
 import { Words } from '../lib/words'
 import { game } from './i18n/game'

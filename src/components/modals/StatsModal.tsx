@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import Countdown from 'react-countdown'
 import { LangContext } from '../../context/lang'
-import { GameStats } from '../../lib/localStorage'
+import { GameStats } from '../../lib/gameLocalStorage'
 import { shareStatus } from '../../lib/share'
 import { Histogram } from '../stats/Histogram'
 import { StatBar } from '../stats/StatBar'

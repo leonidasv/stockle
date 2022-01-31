@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { LangContext } from '../../context/lang'
-import { GameStats } from '../../lib/localStorage'
+import { GameStats } from '../../lib/gameLocalStorage'
 import { statBar } from './i18n/statBar'
 
 type Props = {
