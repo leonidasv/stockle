@@ -44,13 +44,17 @@ export const StatsModal = ({
   return (
     <BaseModal title={t.statistics_title} isOpen={isOpen} handleClose={handleClose}>
       <StatBar gameStats={gameStats} />
-      <h4 className="text-lg leading-6 font-medium text-gray-900">{t.guess_distribution}</h4>
+      <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">{t.guess_distribution}</h4>
       <Histogram gameStats={gameStats} />
       {(isGameLost || isGameWon) && (
-        <div className="mt-5 sm:mt-6 columns-2 flex">
+        <div className="mt-5 sm:mt-6 columns-2 dark:text-white flex">
           <div className="self-center basis-1/2">
             <h5>{t.new_stock_in}</h5>
-            <Countdown className="text-lg font-medium text-gray-900" date={tomorrow} daysInHours={true} />
+            <Countdown
+              className="text-lg font-medium text-gray-900 dark:text-gray-100"
+              date={tomorrow}
+              daysInHours={true}
+            />
           </div>
           <button
             type="button"

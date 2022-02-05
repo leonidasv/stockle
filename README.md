@@ -20,7 +20,8 @@ The "ticker of the day" changes every day at the market opening (9:30am EST for 
 - [ ] Add unit tests
 - [ ] Improved i18n
 - [ ] Set current market via Context
-- [ ] Merge dark theme from upstream
+- [x] Merge dark theme from upstream
+    - [ ] Use context for dark theme
 - [ ] Improved code organization 😅
 
 Pull Requests are welcome.

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Grid } from '../components/grid/Grid'
 import { Keyboard } from '../components/keyboard/Keyboard'
 import { AboutModal } from '../components/modals/AboutModal'
@@ -12,23 +12,30 @@ import { gameContainer } from './i18n/gameContainer'
 
 type Props = {
   market: MARKET
+  toggleDarkMode: () => void
 }
 
-export function GameContainer({ market }: Props) {
+export function GameContainer({ market, toggleDarkMode }: Props) {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [words, setWords] = useState<Words | null>(null)
+
   useEffect(() => {
     wordsFactory(market).then((w) => setWords(w))
   }, [market])
+
   const lang = useContext(LangContext)
   const t = gameContainer[lang]
   const loading = !words
 
   return (
-    <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-      <Header setIsInfoModalOpen={setIsInfoModalOpen} setIsStatsModalOpen={setIsStatsModalOpen} />
+    <div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8 ">
+      <Header
+        setIsInfoModalOpen={setIsInfoModalOpen}
+        setIsStatsModalOpen={setIsStatsModalOpen}
+        toggleDarkMode={toggleDarkMode}
+      />
 
       <InfoModal isOpen={isInfoModalOpen} handleClose={() => setIsInfoModalOpen(false)} />
 

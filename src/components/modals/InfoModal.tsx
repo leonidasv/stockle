@@ -19,7 +19,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
 
   return (
     <BaseModal title={t.how_to_play} isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500">{t.how_to_play_init}</p>
+      <p className="text-sm text-gray-500 dark:text-gray-300">{t.how_to_play_init}</p>
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell value={stock1[0]} status="correct" />
@@ -27,7 +27,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value={stock1[2]} />
         <Cell value={stock1[3]} />
       </div>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         {t.how_to_play_the_letter}
         <b>{stock1[0]}</b>
         {t.how_to_play_letter_correct}
@@ -39,7 +39,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value={stock2[2]} status="present" />
         <Cell value={stock2[3]} />
       </div>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         {t.how_to_play_the_letter}
         <b>{stock2[2]}</b>
         {t.how_to_play_letter_present}
@@ -51,13 +51,13 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value={stock3[2]} />
         <Cell value={stock3[3]} status="absent" />
       </div>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         {t.how_to_play_the_letter}
         <b>{stock3[3]}</b>
         {t.how_to_play_letter_absent}
       </p>
       <br />
-      <p className="text-sm text-gray-500">{t.new_ticker_available_at}</p>
+      <p className="text-sm text-gray-500 dark:text-gray-300">{t.new_ticker_available_at}</p>
     </BaseModal>
   )
 }

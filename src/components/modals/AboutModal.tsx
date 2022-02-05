@@ -14,7 +14,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
 
   return (
     <BaseModal title="About" isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-300">
         {t.about_opensource_clone}{' '}
         <a href="https://github.com/leonidasv/stockle" className="underline font-bold">
           {t.about_check_out_source}
