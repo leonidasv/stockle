@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https://stockle.win/static/css/main.91ee5d22.css",
-    "main.js": "https://stockle.win/static/js/main.5588c0fa.js",
+    "main.css": "https://stockle.win/static/css/main.0bfdcdfb.css",
+    "main.js": "https://stockle.win/static/js/main.7c73a604.js",
     "static/js/787.05a0b459.chunk.js": "https://stockle.win/static/js/787.05a0b459.chunk.js",
     "index.html": "https://stockle.win/index.html",
-    "main.91ee5d22.css.map": "https://stockle.win/static/css/main.91ee5d22.css.map",
-    "main.5588c0fa.js.map": "https://stockle.win/static/js/main.5588c0fa.js.map",
+    "main.0bfdcdfb.css.map": "https://stockle.win/static/css/main.0bfdcdfb.css.map",
+    "main.7c73a604.js.map": "https://stockle.win/static/js/main.7c73a604.js.map",
     "787.05a0b459.chunk.js.map": "https://stockle.win/static/js/787.05a0b459.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.91ee5d22.css",
-    "static/js/main.5588c0fa.js"
+    "static/css/main.0bfdcdfb.css",
+    "static/js/main.7c73a604.js"
   ]
 }
