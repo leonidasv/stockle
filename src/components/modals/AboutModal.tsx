@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { LangContext } from '../../context/lang'
 import { BaseModal } from './BaseModal'
 import { about } from './i18n/about'
@@ -31,6 +31,13 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
       </p>
       <p className="text-sm text-gray-500 font-normal">{t.privacy_you_own_your_data}</p>
       <p className="text-sm text-gray-400 font-light italic mt-6">{t.not_investment_advice}</p>
+      <footer className="text-sm text-gray-500 dark:text-gray-300 text-center mt-4">
+        <span>{t.credits_prefix}</span>
+        <a href={t.credits_link_url} className="hover:text-indigo-400">
+          {t.credits_link_text}
+        </a>
+        .
+      </footer>
     </BaseModal>
   )
 }

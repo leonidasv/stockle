@@ -2,11 +2,7 @@
 
 ### [Play now](https://stockle.win)
 
-<span align="center">
-
 ![chrome_JPnFE4QB7o](https://user-images.githubusercontent.com/17609157/151673416-2123bdc4-706b-4ce1-91fe-bfa556f5b2d8.png)
-
-</span>
 
 Forked from [hannahcode/wordle](https://github.com/hannahcode/wordle).
 
@@ -18,11 +14,11 @@ The "ticker of the day" changes every day at the market opening (9:30am EST for 
 ### TODO
 
 - [ ] Add unit tests
-- [ ] Improved i18n
+- [ ] Improve i18n
 - [ ] Set current market via Context
 - [x] Merge dark theme from upstream
     - [ ] Use context for dark theme
-- [ ] Improved code organization 😅
+- [ ] Improve code organization 😅
 
 Pull Requests are welcome.
 
